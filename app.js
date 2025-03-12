@@ -34,18 +34,19 @@ document.addEventListener('DOMContentLoaded', function () {
         const buttons = document.createElement('div');
         buttons.className = 'space-x-2';
   
-        // Edit Button
-        const editBtn = document.createElement('button');
-        editBtn.className = 'bg-yellow-500 text-white py-1 px-3 rounded-lg hover:bg-yellow-600';
-        editBtn.textContent = 'Edit';
-        editBtn.onclick = () => {
-          const newTask = prompt('Edit task:', task);
-          if (newTask !== null && newTask.trim() !== '') {
-            tasks[index] = newTask.trim();
-            saveTasks();
-            renderTasks();
-          }
-        };
+ // Edit Button
+const editBtn = document.createElement('button');
+editBtn.className = 'bg-yellow-500 text-white py-1 px-3 rounded-lg hover:bg-yellow-600';
+editBtn.textContent = 'Edit';
+editBtn.onclick = () => {
+  const newTask = prompt('Edit task:', task);
+  if (newTask !== null && newTask.trim() !== '') {
+    tasks[index] = newTask.trim();
+    saveTasks();
+    renderTasks();
+  }
+};
+
   
         // Delete Button
         const deleteBtn = document.createElement('button');
